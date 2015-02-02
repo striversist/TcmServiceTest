@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/cmds_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <Button
+	        android:id="@+id/test_context_service_btn"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:onClick="testGetContextService"
+	        android:textSize="12sp"
+	        android:text="Context Service" />
+        
+        <Button 
+            android:id="@+id/test_TestService_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="testGetTestService"
+            android:textSize="12sp"
+            android:text="Test Service" />
+        
+        <Button
+            android:id="@+id/test_TcmDaemon_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="testTcmDaemonService"
+            android:textSize="12sp"
+            android:text="TcmDaemon Service" />
+    </LinearLayout>
+    
+    <ScrollView android:id="@+id/logger_sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/cmds_ll"
+        android:background="@android:color/black" >
+        <TextView android:id="@+id/logger_flow_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black" />
+    </ScrollView>
+
+</RelativeLayout>
